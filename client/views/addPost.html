@@ -1,0 +1,18 @@
+<template name="addPost">
+    <div class="container2">
+        <div class="row">                
+            {{#if currentUser}}
+                <div class="form">
+                    <form class="addPostsForm">
+                        <input type="text" id="title" class="form-control" name="title" placeholder="Enter title"/> <br/>
+                        <textarea  type="text" id="content" class="form-control" name="content" placeholder="Enter content" style="
+    height: 300px;"></textarea> <br/>
+                        <input type="submit" value="Add" class="btn btn-success btn-lg"/>
+                    </form>
+                </div>
+            {{else}}
+                <div class="col-xs-8 col-xs-offset-2" style="color: brown;">Please login to submit a post</div>
+            {{/if}}
+        </div>
+    </div>
+</template>

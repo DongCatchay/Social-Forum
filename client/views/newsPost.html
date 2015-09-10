@@ -1,0 +1,25 @@
+<template name="newsPost">
+    <div class="container2">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <h2>{{title}}</h2>
+                <span>{{content}}</span><br/>
+				<span class="date">{{dateAdded}}</span>
+                <hr/>
+                <h2>Comments</h2>
+                {{#if currentUser}}
+        			<form class="new-comment">
+          				<input type="text" name="text" placeholder="Type to add new comments" />
+        			</form>
+        		{{else}}
+                    <div style="color: brown;">Please login to comment</div>
+      			{{/if}}
+      			<ul>
+      				{{#each comments}}
+        				{{> comment}}
+      				{{/each}}
+    			</ul>
+            </div>
+        </div>
+    </div>
+</template>
